@@ -1,0 +1,13 @@
+.mainContainer {
+  max-width: 900px;
+  margin: 25px;
+  background: #1f1f1f;
+  border-radius: 15px;
+  padding-bottom: 20px;
+}
+
+.title {
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
+}
