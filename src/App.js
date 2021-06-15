@@ -19,11 +19,16 @@ const App = (props) => {
       ];
     });
   };
+
+  const closeList = () => {
+    setItemsList([]);
+  }
+
   return (
     <div>
       <h2 className={classes.title}>This is testing form</h2>
       <AddItem onAddItem={addItemHandler} />
-      <ItemsList newItems={itemsList} />
+      <ItemsList testClose={closeList} newItems={itemsList} />
     </div>
   );
 };

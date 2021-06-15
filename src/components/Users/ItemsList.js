@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../UI/Card";
 import classes from './ItemsList.module.css'
+import Button from '../UI/Button'
 
 
 const ItemsList = (props) => {
@@ -8,8 +9,9 @@ const ItemsList = (props) => {
     <Card className={classes.newItems}>
       <ul>
         {props.newItems.map((newItem) => (
-          <li key={newItem.id}>
-            {newItem.name} (buy {newItem.item} on {newItem.price})
+          <li key={newItem.id} onClick={props.testClose}>
+            {newItem.name} (buy {newItem.item} for {newItem.price} $)
+            <Button onClicking={props.testClose}>Close</Button>
           </li>
         ))}
       </ul>
